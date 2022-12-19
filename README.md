@@ -2,7 +2,7 @@
 A Python implementation of Minesweeper with a mine probability calculator
 
 ## Requirements
-This Python project uses PyGame, SymPy and in-built library functions for Python >= 3.8
+This Python project uses PyGame, SymPy and built-in library functions for Python >= 3.8
 
 ## How to use
 - The game currently does not have a proper GUI. It starts with the game already initiated according to the number of mines, width and height in the code. To change these variables go to the lines 4, 5 and 6 of main.py. To change the window size, change the variable 'SQ_SIZE' in line 14.

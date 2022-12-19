@@ -8,7 +8,7 @@ This Python project uses PyGame, SymPy and in-built math functions for Python >=
 - The game currently does not have a proper GUI. It starts with the game already initiated according to the number of mines, width and height determined in the code. To change these variables go to the lines 4, 5 and 6 of main.py. To change the window size, change the variable 'SQ_SIZE' in line 14.
 - Click with the left mouse button to reveal a square. If it is a mine, all the mines will appear and the game will freeze.
 - Click with the right mouse button to add or remove a flag (**Warning**: squares incorrectly flagged may crash the game when using the probability function due to the linear system having inconsistencies, see more about below)
-- Press 'p' to show the probabilities of the border squares
+- Press 'p' to show the probabilities of the border squares (the squares adjacent to a number square)
 - Press 'l' to hide the probabilities
 - Press 'c' to automatically click the squares with probability of 100% or 0%
 
@@ -26,7 +26,7 @@ Using the image above, the following equations, for example, can be used:
 - a2+a3+a4 = 2
 - and so on
 
-Therefore, the game can be treated as a system of equations. In this project, SymPy was used to handle the system, giving as output a parametric solution with a certain number of parameters. For example (**not** the solution for the image above), a solution can be given as (a1-1, a1, a2, a1+a2, a4, a4-1), that is, a0 = a1-1, a3 = a1+a2 and a5 = a4-1, in this case. 
+Therefore, the game can be treated as a system of equations. In this project, SymPy was used to handle the system, giving as output a parametric solution with a certain number of parameters. For example (**not** the solution for the image above), a solution can be given as (a1-1, a1, a2, a1+a2, a4, a4-1), that is, a0 = a1-1, a3 = a1+a2 and a5 = a4-1, in this case. Note that the squares that have already been determined to have a mine or not don't need to be considered.
 
 This solution is then broken down in groups that are independent between each other, that is, the parameters of each group do not appear in any of the other expressions of the parametric solution. In the previous example, the groups would be [[a1,a2], [a4]] and the groups expressions would be [[a1-1, a1, a2, a1+a2], [a4, a4-1]].
 

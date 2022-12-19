@@ -25,6 +25,7 @@ Using the image above, the following equations, for example, can be used:
 - a1+a2+a3 = 2
 - a2+a3+a4 = 2
 - and so on
+
 Therefore, the game can be treated as a system of equations. In this project, SymPy was used to handle the system, giving as output a parametric solution with a certain number of parameters. For example (**not** the solution for the image above), a solution can be given as (a1-1, a1, a2, a1+a2, a4, a4-1), that is, a0 = a1-1, a3 = a1+a2 and a5 = a4-1, in this case. 
 
 This solution is then broken down in groups that are independent between each other, that is, the parameters of each group do not appear in any of the other expressions of the parametric solution. In the previous example, the groups would be [[a1,a2], [a4]] and the groups expressions would be [[a1-1, a1, a2, a1+a2], [a4, a4-1]].

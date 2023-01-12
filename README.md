@@ -1,4 +1,4 @@
-# Minesweeper-probabilty-calculator
+# Minesweeper-probability-calculator
 A Python implementation of Minesweeper with a mine probability calculator
 
 ## Requirements
